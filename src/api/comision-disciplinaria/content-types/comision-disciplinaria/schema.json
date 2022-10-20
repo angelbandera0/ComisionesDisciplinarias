@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comision_disciplinarias",
+  "info": {
+    "singularName": "comision-disciplinaria",
+    "pluralName": "comision-disciplinarias",
+    "displayName": "Comision_disciplinaria"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "comision_disciplinarias"
+    },
+    "denuncia": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::denuncia.denuncia",
+      "inversedBy": "comision_disciplinaria"
+    },
+    "expedientes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::expediente.expediente",
+      "inversedBy": "comision_disciplinarias"
+    }
+  }
+}

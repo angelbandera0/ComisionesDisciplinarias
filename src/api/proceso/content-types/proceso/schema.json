@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "procesos",
+  "info": {
+    "singularName": "proceso",
+    "pluralName": "procesos",
+    "displayName": "Proceso"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "denuncias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::denuncia.denuncia",
+      "mappedBy": "proceso"
+    }
+  }
+}

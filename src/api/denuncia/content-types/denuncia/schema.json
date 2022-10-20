@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "denuncias",
+  "info": {
+    "singularName": "denuncia",
+    "pluralName": "denuncias",
+    "displayName": "Denuncia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha": {
+      "type": "date"
+    },
+    "estudiante": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::estudiante.estudiante",
+      "inversedBy": "denuncias"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "denuncias"
+    },
+    "proceso": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::proceso.proceso",
+      "inversedBy": "denuncias"
+    },
+    "comision_disciplinaria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::comision-disciplinaria.comision-disciplinaria",
+      "inversedBy": "denuncia"
+    }
+  }
+}

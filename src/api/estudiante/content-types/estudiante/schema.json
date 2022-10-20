@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estudiantes",
+  "info": {
+    "singularName": "estudiante",
+    "pluralName": "estudiantes",
+    "displayName": "Estudiante"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellidos": {
+      "type": "string"
+    },
+    "solapin": {
+      "type": "string"
+    },
+    "curso": {
+      "type": "string"
+    },
+    "carrera": {
+      "type": "string"
+    },
+    "ci": {
+      "type": "string"
+    },
+    "grupo": {
+      "type": "string"
+    },
+    "facultad": {
+      "type": "string"
+    },
+    "denuncias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::denuncia.denuncia",
+      "mappedBy": "estudiante"
+    },
+    "expediente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::expediente.expediente",
+      "inversedBy": "estudiante"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expedientes",
+  "info": {
+    "singularName": "expediente",
+    "pluralName": "expedientes",
+    "displayName": "Expediente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "estudiante": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::estudiante.estudiante",
+      "inversedBy": "expediente"
+    },
+    "comision_disciplinarias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::comision-disciplinaria.comision-disciplinaria",
+      "inversedBy": "expedientes"
+    }
+  }
+}
