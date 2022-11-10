@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -38,6 +38,21 @@
       "relation": "oneToOne",
       "target": "api::comision-disciplinaria.comision-disciplinaria",
       "inversedBy": "denuncia"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "Pendiente",
+        "Denega",
+        "Aceptada"
+      ],
+      "default": "Pendiente"
+    },
+    "expediente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::expediente.expediente",
+      "inversedBy": "denuncias"
     }
   }
 }

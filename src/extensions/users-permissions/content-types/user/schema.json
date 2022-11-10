@@ -72,9 +72,6 @@
     "solapin": {
       "type": "string"
     },
-    "cargo": {
-      "type": "string"
-    },
     "ci": {
       "type": "string"
     },
@@ -88,7 +85,16 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::comision-disciplinaria.comision-disciplinaria",
-      "inversedBy": "users_permissions_users"
+      "mappedBy": "users_permissions_users"
+    },
+    "cargo": {
+      "type": "enumeration",
+      "enum": [
+        "Trabajador",
+        "Decano",
+        "Supervisor"
+      ],
+      "default": "Trabajador"
     }
   }
 }

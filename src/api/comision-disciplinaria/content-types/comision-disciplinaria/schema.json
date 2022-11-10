@@ -4,10 +4,11 @@
   "info": {
     "singularName": "comision-disciplinaria",
     "pluralName": "comision-disciplinarias",
-    "displayName": "Comision_disciplinaria"
+    "displayName": "Comision_disciplinaria",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -21,13 +22,13 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::denuncia.denuncia",
-      "inversedBy": "comision_disciplinaria"
+      "mappedBy": "comision_disciplinaria"
     },
     "expedientes": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::expediente.expediente",
-      "inversedBy": "comision_disciplinarias"
+      "mappedBy": "comision_disciplinarias"
     }
   }
 }

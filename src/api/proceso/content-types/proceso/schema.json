@@ -4,10 +4,11 @@
   "info": {
     "singularName": "proceso",
     "pluralName": "procesos",
-    "displayName": "Proceso"
+    "displayName": "Proceso",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

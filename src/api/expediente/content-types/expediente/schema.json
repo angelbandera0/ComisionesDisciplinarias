@@ -4,10 +4,11 @@
   "info": {
     "singularName": "expediente",
     "pluralName": "expedientes",
-    "displayName": "Expediente"
+    "displayName": "Expediente",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -22,6 +23,12 @@
       "relation": "manyToMany",
       "target": "api::comision-disciplinaria.comision-disciplinaria",
       "inversedBy": "expedientes"
+    },
+    "denuncias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::denuncia.denuncia",
+      "mappedBy": "expediente"
     }
   }
 }

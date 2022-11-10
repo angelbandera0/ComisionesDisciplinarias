@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-10-20T16:39:27.926Z"
+    "x-generation-date": "2022-11-10T00:00:39.940Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -622,9 +622,6 @@
                                   "solapin": {
                                     "type": "string"
                                   },
-                                  "cargo": {
-                                    "type": "string"
-                                  },
                                   "ci": {
                                     "type": "string"
                                   },
@@ -810,10 +807,6 @@
                                                                                         "type": "string",
                                                                                         "format": "date-time"
                                                                                       },
-                                                                                      "publishedAt": {
-                                                                                        "type": "string",
-                                                                                        "format": "date-time"
-                                                                                      },
                                                                                       "createdBy": {
                                                                                         "type": "object",
                                                                                         "properties": {
@@ -855,15 +848,31 @@
                                                                             }
                                                                           }
                                                                         },
+                                                                        "denuncias": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "data": {
+                                                                              "type": "array",
+                                                                              "items": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "id": {
+                                                                                    "type": "string"
+                                                                                  },
+                                                                                  "attributes": {
+                                                                                    "type": "object",
+                                                                                    "properties": {}
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
                                                                         "createdAt": {
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
                                                                         "updatedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
-                                                                        "publishedAt": {
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
@@ -912,10 +921,6 @@
                                                               "format": "date-time"
                                                             },
                                                             "updatedAt": {
-                                                              "type": "string",
-                                                              "format": "date-time"
-                                                            },
-                                                            "publishedAt": {
                                                               "type": "string",
                                                               "format": "date-time"
                                                             },
@@ -1016,10 +1021,6 @@
                                                               "type": "string",
                                                               "format": "date-time"
                                                             },
-                                                            "publishedAt": {
-                                                              "type": "string",
-                                                              "format": "date-time"
-                                                            },
                                                             "createdBy": {
                                                               "type": "object",
                                                               "properties": {
@@ -1077,15 +1078,36 @@
                                                     }
                                                   }
                                                 },
+                                                "estado": {
+                                                  "type": "string",
+                                                  "enum": [
+                                                    "Pendiente",
+                                                    "Denega",
+                                                    "Aceptada"
+                                                  ]
+                                                },
+                                                "expediente": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "string"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
                                                 "createdAt": {
                                                   "type": "string",
                                                   "format": "date-time"
                                                 },
                                                 "updatedAt": {
-                                                  "type": "string",
-                                                  "format": "date-time"
-                                                },
-                                                "publishedAt": {
                                                   "type": "string",
                                                   "format": "date-time"
                                                 },
@@ -1149,6 +1171,14 @@
                                         }
                                       }
                                     }
+                                  },
+                                  "cargo": {
+                                    "type": "string",
+                                    "enum": [
+                                      "Trabajador",
+                                      "Decano",
+                                      "Supervisor"
+                                    ]
                                   },
                                   "createdAt": {
                                     "type": "string",
@@ -1241,10 +1271,6 @@
                       "format": "date-time"
                     },
                     "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
                       "type": "string",
                       "format": "date-time"
                     },
@@ -1792,9 +1818,6 @@
                                 "solapin": {
                                   "type": "string"
                                 },
-                                "cargo": {
-                                  "type": "string"
-                                },
                                 "ci": {
                                   "type": "string"
                                 },
@@ -1980,10 +2003,6 @@
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
-                                                                                    "publishedAt": {
-                                                                                      "type": "string",
-                                                                                      "format": "date-time"
-                                                                                    },
                                                                                     "createdBy": {
                                                                                       "type": "object",
                                                                                       "properties": {
@@ -2025,15 +2044,31 @@
                                                                           }
                                                                         }
                                                                       },
+                                                                      "denuncias": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "string"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {}
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
                                                                       "createdAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
                                                                       "updatedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
-                                                                      "publishedAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
@@ -2082,10 +2117,6 @@
                                                             "format": "date-time"
                                                           },
                                                           "updatedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
-                                                          "publishedAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
@@ -2186,10 +2217,6 @@
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
-                                                          "publishedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
                                                           "createdBy": {
                                                             "type": "object",
                                                             "properties": {
@@ -2247,15 +2274,36 @@
                                                   }
                                                 }
                                               },
+                                              "estado": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "Pendiente",
+                                                  "Denega",
+                                                  "Aceptada"
+                                                ]
+                                              },
+                                              "expediente": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "data": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "id": {
+                                                        "type": "string"
+                                                      },
+                                                      "attributes": {
+                                                        "type": "object",
+                                                        "properties": {}
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
                                               "createdAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
                                               "updatedAt": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                              },
-                                              "publishedAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
@@ -2319,6 +2367,14 @@
                                       }
                                     }
                                   }
+                                },
+                                "cargo": {
+                                  "type": "string",
+                                  "enum": [
+                                    "Trabajador",
+                                    "Decano",
+                                    "Supervisor"
+                                  ]
                                 },
                                 "createdAt": {
                                   "type": "string",
@@ -2414,10 +2470,6 @@
                     "type": "string",
                     "format": "date-time"
                   },
-                  "publishedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
                   "createdBy": {
                     "type": "object",
                     "properties": {
@@ -2509,6 +2561,25 @@
                 "example": "string or id"
               },
               "comision_disciplinaria": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
+              "estado": {
+                "type": "string",
+                "enum": [
+                  "Pendiente",
+                  "Denega",
+                  "Aceptada"
+                ]
+              },
+              "expediente": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -3078,9 +3149,6 @@
                                                           "solapin": {
                                                             "type": "string"
                                                           },
-                                                          "cargo": {
-                                                            "type": "string"
-                                                          },
                                                           "ci": {
                                                             "type": "string"
                                                           },
@@ -3206,15 +3274,31 @@
                                                                                           }
                                                                                         }
                                                                                       },
+                                                                                      "denuncias": {
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                          "data": {
+                                                                                            "type": "array",
+                                                                                            "items": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "id": {
+                                                                                                  "type": "string"
+                                                                                                },
+                                                                                                "attributes": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {}
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      },
                                                                                       "createdAt": {
                                                                                         "type": "string",
                                                                                         "format": "date-time"
                                                                                       },
                                                                                       "updatedAt": {
-                                                                                        "type": "string",
-                                                                                        "format": "date-time"
-                                                                                      },
-                                                                                      "publishedAt": {
                                                                                         "type": "string",
                                                                                         "format": "date-time"
                                                                                       },
@@ -3267,10 +3351,6 @@
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
-                                                                        "publishedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
                                                                         "createdBy": {
                                                                           "type": "object",
                                                                           "properties": {
@@ -3311,6 +3391,14 @@
                                                                 }
                                                               }
                                                             }
+                                                          },
+                                                          "cargo": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                              "Trabajador",
+                                                              "Decano",
+                                                              "Supervisor"
+                                                            ]
                                                           },
                                                           "createdAt": {
                                                             "type": "string",
@@ -3400,10 +3488,6 @@
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
-                                                          "publishedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
                                                           "createdBy": {
                                                             "type": "object",
                                                             "properties": {
@@ -3461,15 +3545,36 @@
                                                   }
                                                 }
                                               },
+                                              "estado": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "Pendiente",
+                                                  "Denega",
+                                                  "Aceptada"
+                                                ]
+                                              },
+                                              "expediente": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "data": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "id": {
+                                                        "type": "string"
+                                                      },
+                                                      "attributes": {
+                                                        "type": "object",
+                                                        "properties": {}
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
                                               "createdAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
                                               "updatedAt": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                              },
-                                              "publishedAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
@@ -3536,10 +3641,6 @@
                                   "format": "date-time"
                                 },
                                 "updatedAt": {
-                                  "type": "string",
-                                  "format": "date-time"
-                                },
-                                "publishedAt": {
                                   "type": "string",
                                   "format": "date-time"
                                 },
@@ -3634,15 +3735,36 @@
                         }
                       }
                     },
+                    "estado": {
+                      "type": "string",
+                      "enum": [
+                        "Pendiente",
+                        "Denega",
+                        "Aceptada"
+                      ]
+                    },
+                    "expediente": {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "attributes": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          }
+                        }
+                      }
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
                     },
                     "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
                       "type": "string",
                       "format": "date-time"
                     },
@@ -4263,9 +4385,6 @@
                                                         "solapin": {
                                                           "type": "string"
                                                         },
-                                                        "cargo": {
-                                                          "type": "string"
-                                                        },
                                                         "ci": {
                                                           "type": "string"
                                                         },
@@ -4391,15 +4510,31 @@
                                                                                         }
                                                                                       }
                                                                                     },
+                                                                                    "denuncias": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "data": {
+                                                                                          "type": "array",
+                                                                                          "items": {
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                              "id": {
+                                                                                                "type": "string"
+                                                                                              },
+                                                                                              "attributes": {
+                                                                                                "type": "object",
+                                                                                                "properties": {}
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
                                                                                     "createdAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
                                                                                     "updatedAt": {
-                                                                                      "type": "string",
-                                                                                      "format": "date-time"
-                                                                                    },
-                                                                                    "publishedAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
@@ -4452,10 +4587,6 @@
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
-                                                                      "publishedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
                                                                       "createdBy": {
                                                                         "type": "object",
                                                                         "properties": {
@@ -4496,6 +4627,14 @@
                                                               }
                                                             }
                                                           }
+                                                        },
+                                                        "cargo": {
+                                                          "type": "string",
+                                                          "enum": [
+                                                            "Trabajador",
+                                                            "Decano",
+                                                            "Supervisor"
+                                                          ]
                                                         },
                                                         "createdAt": {
                                                           "type": "string",
@@ -4585,10 +4724,6 @@
                                                           "type": "string",
                                                           "format": "date-time"
                                                         },
-                                                        "publishedAt": {
-                                                          "type": "string",
-                                                          "format": "date-time"
-                                                        },
                                                         "createdBy": {
                                                           "type": "object",
                                                           "properties": {
@@ -4646,15 +4781,36 @@
                                                 }
                                               }
                                             },
+                                            "estado": {
+                                              "type": "string",
+                                              "enum": [
+                                                "Pendiente",
+                                                "Denega",
+                                                "Aceptada"
+                                              ]
+                                            },
+                                            "expediente": {
+                                              "type": "object",
+                                              "properties": {
+                                                "data": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "id": {
+                                                      "type": "string"
+                                                    },
+                                                    "attributes": {
+                                                      "type": "object",
+                                                      "properties": {}
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
                                             "createdAt": {
                                               "type": "string",
                                               "format": "date-time"
                                             },
                                             "updatedAt": {
-                                              "type": "string",
-                                              "format": "date-time"
-                                            },
-                                            "publishedAt": {
                                               "type": "string",
                                               "format": "date-time"
                                             },
@@ -4721,10 +4877,6 @@
                                 "format": "date-time"
                               },
                               "updatedAt": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
-                              "publishedAt": {
                                 "type": "string",
                                 "format": "date-time"
                               },
@@ -4819,15 +4971,36 @@
                       }
                     }
                   },
+                  "estado": {
+                    "type": "string",
+                    "enum": [
+                      "Pendiente",
+                      "Denega",
+                      "Aceptada"
+                    ]
+                  },
+                  "expediente": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "attributes": {
+                            "type": "object",
+                            "properties": {}
+                          }
+                        }
+                      }
+                    }
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
                   },
                   "updatedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "publishedAt": {
                     "type": "string",
                     "format": "date-time"
                   },
@@ -5560,9 +5733,6 @@
                                                                                       "solapin": {
                                                                                         "type": "string"
                                                                                       },
-                                                                                      "cargo": {
-                                                                                        "type": "string"
-                                                                                      },
                                                                                       "ci": {
                                                                                         "type": "string"
                                                                                       },
@@ -5605,6 +5775,14 @@
                                                                                             }
                                                                                           }
                                                                                         }
+                                                                                      },
+                                                                                      "cargo": {
+                                                                                        "type": "string",
+                                                                                        "enum": [
+                                                                                          "Trabajador",
+                                                                                          "Decano",
+                                                                                          "Supervisor"
+                                                                                        ]
                                                                                       },
                                                                                       "createdAt": {
                                                                                         "type": "string",
@@ -5700,10 +5878,6 @@
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
-                                                                        "publishedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
                                                                         "createdBy": {
                                                                           "type": "object",
                                                                           "properties": {
@@ -5745,15 +5919,31 @@
                                                               }
                                                             }
                                                           },
+                                                          "denuncias": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "array",
+                                                                "items": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
                                                           "createdAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
                                                           "updatedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
-                                                          "publishedAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
@@ -5802,10 +5992,6 @@
                                                 "format": "date-time"
                                               },
                                               "updatedAt": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                              },
-                                              "publishedAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
@@ -5906,10 +6092,6 @@
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
-                                              "publishedAt": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                              },
                                               "createdBy": {
                                                 "type": "object",
                                                 "properties": {
@@ -5967,15 +6149,36 @@
                                       }
                                     }
                                   },
+                                  "estado": {
+                                    "type": "string",
+                                    "enum": [
+                                      "Pendiente",
+                                      "Denega",
+                                      "Aceptada"
+                                    ]
+                                  },
+                                  "expediente": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "string"
+                                          },
+                                          "attributes": {
+                                            "type": "object",
+                                            "properties": {}
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
                                   },
                                   "updatedAt": {
-                                    "type": "string",
-                                    "format": "date-time"
-                                  },
-                                  "publishedAt": {
                                     "type": "string",
                                     "format": "date-time"
                                   },
@@ -6042,10 +6245,6 @@
                       "format": "date-time"
                     },
                     "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
                       "type": "string",
                       "format": "date-time"
                     },
@@ -6734,9 +6933,6 @@
                                                                                     "solapin": {
                                                                                       "type": "string"
                                                                                     },
-                                                                                    "cargo": {
-                                                                                      "type": "string"
-                                                                                    },
                                                                                     "ci": {
                                                                                       "type": "string"
                                                                                     },
@@ -6779,6 +6975,14 @@
                                                                                           }
                                                                                         }
                                                                                       }
+                                                                                    },
+                                                                                    "cargo": {
+                                                                                      "type": "string",
+                                                                                      "enum": [
+                                                                                        "Trabajador",
+                                                                                        "Decano",
+                                                                                        "Supervisor"
+                                                                                      ]
                                                                                     },
                                                                                     "createdAt": {
                                                                                       "type": "string",
@@ -6874,10 +7078,6 @@
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
-                                                                      "publishedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
                                                                       "createdBy": {
                                                                         "type": "object",
                                                                         "properties": {
@@ -6919,15 +7119,31 @@
                                                             }
                                                           }
                                                         },
+                                                        "denuncias": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "data": {
+                                                              "type": "array",
+                                                              "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {}
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
                                                         },
                                                         "updatedAt": {
-                                                          "type": "string",
-                                                          "format": "date-time"
-                                                        },
-                                                        "publishedAt": {
                                                           "type": "string",
                                                           "format": "date-time"
                                                         },
@@ -6976,10 +7192,6 @@
                                               "format": "date-time"
                                             },
                                             "updatedAt": {
-                                              "type": "string",
-                                              "format": "date-time"
-                                            },
-                                            "publishedAt": {
                                               "type": "string",
                                               "format": "date-time"
                                             },
@@ -7080,10 +7292,6 @@
                                               "type": "string",
                                               "format": "date-time"
                                             },
-                                            "publishedAt": {
-                                              "type": "string",
-                                              "format": "date-time"
-                                            },
                                             "createdBy": {
                                               "type": "object",
                                               "properties": {
@@ -7141,15 +7349,36 @@
                                     }
                                   }
                                 },
+                                "estado": {
+                                  "type": "string",
+                                  "enum": [
+                                    "Pendiente",
+                                    "Denega",
+                                    "Aceptada"
+                                  ]
+                                },
+                                "expediente": {
+                                  "type": "object",
+                                  "properties": {
+                                    "data": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "attributes": {
+                                          "type": "object",
+                                          "properties": {}
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
                                 "createdAt": {
                                   "type": "string",
                                   "format": "date-time"
                                 },
                                 "updatedAt": {
-                                  "type": "string",
-                                  "format": "date-time"
-                                },
-                                "publishedAt": {
                                   "type": "string",
                                   "format": "date-time"
                                 },
@@ -7219,10 +7448,6 @@
                     "type": "string",
                     "format": "date-time"
                   },
-                  "publishedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
                   "createdBy": {
                     "type": "object",
                     "properties": {
@@ -7288,6 +7513,20 @@
                 "example": "string or id"
               },
               "comision_disciplinarias": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
+              "denuncias": {
                 "type": "array",
                 "items": {
                   "oneOf": [
@@ -7856,9 +8095,6 @@
                                                           "solapin": {
                                                             "type": "string"
                                                           },
-                                                          "cargo": {
-                                                            "type": "string"
-                                                          },
                                                           "ci": {
                                                             "type": "string"
                                                           },
@@ -7984,15 +8220,31 @@
                                                                                           }
                                                                                         }
                                                                                       },
+                                                                                      "denuncias": {
+                                                                                        "type": "object",
+                                                                                        "properties": {
+                                                                                          "data": {
+                                                                                            "type": "array",
+                                                                                            "items": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "id": {
+                                                                                                  "type": "string"
+                                                                                                },
+                                                                                                "attributes": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {}
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      },
                                                                                       "createdAt": {
                                                                                         "type": "string",
                                                                                         "format": "date-time"
                                                                                       },
                                                                                       "updatedAt": {
-                                                                                        "type": "string",
-                                                                                        "format": "date-time"
-                                                                                      },
-                                                                                      "publishedAt": {
                                                                                         "type": "string",
                                                                                         "format": "date-time"
                                                                                       },
@@ -8045,10 +8297,6 @@
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
-                                                                        "publishedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
                                                                         "createdBy": {
                                                                           "type": "object",
                                                                           "properties": {
@@ -8089,6 +8337,14 @@
                                                                 }
                                                               }
                                                             }
+                                                          },
+                                                          "cargo": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                              "Trabajador",
+                                                              "Decano",
+                                                              "Supervisor"
+                                                            ]
                                                           },
                                                           "createdAt": {
                                                             "type": "string",
@@ -8178,10 +8434,6 @@
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
-                                                          "publishedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
                                                           "createdBy": {
                                                             "type": "object",
                                                             "properties": {
@@ -8239,15 +8491,36 @@
                                                   }
                                                 }
                                               },
+                                              "estado": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "Pendiente",
+                                                  "Denega",
+                                                  "Aceptada"
+                                                ]
+                                              },
+                                              "expediente": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "data": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "id": {
+                                                        "type": "string"
+                                                      },
+                                                      "attributes": {
+                                                        "type": "object",
+                                                        "properties": {}
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
                                               "createdAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
                                               "updatedAt": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                              },
-                                              "publishedAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
@@ -8317,10 +8590,6 @@
                                   "type": "string",
                                   "format": "date-time"
                                 },
-                                "publishedAt": {
-                                  "type": "string",
-                                  "format": "date-time"
-                                },
                                 "createdBy": {
                                   "type": "object",
                                   "properties": {
@@ -8381,15 +8650,31 @@
                         }
                       }
                     },
+                    "denuncias": {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
                     },
                     "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
                       "type": "string",
                       "format": "date-time"
                     },
@@ -9006,9 +9291,6 @@
                                                         "solapin": {
                                                           "type": "string"
                                                         },
-                                                        "cargo": {
-                                                          "type": "string"
-                                                        },
                                                         "ci": {
                                                           "type": "string"
                                                         },
@@ -9134,15 +9416,31 @@
                                                                                         }
                                                                                       }
                                                                                     },
+                                                                                    "denuncias": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "data": {
+                                                                                          "type": "array",
+                                                                                          "items": {
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                              "id": {
+                                                                                                "type": "string"
+                                                                                              },
+                                                                                              "attributes": {
+                                                                                                "type": "object",
+                                                                                                "properties": {}
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
                                                                                     "createdAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
                                                                                     "updatedAt": {
-                                                                                      "type": "string",
-                                                                                      "format": "date-time"
-                                                                                    },
-                                                                                    "publishedAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
@@ -9195,10 +9493,6 @@
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
-                                                                      "publishedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
                                                                       "createdBy": {
                                                                         "type": "object",
                                                                         "properties": {
@@ -9239,6 +9533,14 @@
                                                               }
                                                             }
                                                           }
+                                                        },
+                                                        "cargo": {
+                                                          "type": "string",
+                                                          "enum": [
+                                                            "Trabajador",
+                                                            "Decano",
+                                                            "Supervisor"
+                                                          ]
                                                         },
                                                         "createdAt": {
                                                           "type": "string",
@@ -9328,10 +9630,6 @@
                                                           "type": "string",
                                                           "format": "date-time"
                                                         },
-                                                        "publishedAt": {
-                                                          "type": "string",
-                                                          "format": "date-time"
-                                                        },
                                                         "createdBy": {
                                                           "type": "object",
                                                           "properties": {
@@ -9389,15 +9687,36 @@
                                                 }
                                               }
                                             },
+                                            "estado": {
+                                              "type": "string",
+                                              "enum": [
+                                                "Pendiente",
+                                                "Denega",
+                                                "Aceptada"
+                                              ]
+                                            },
+                                            "expediente": {
+                                              "type": "object",
+                                              "properties": {
+                                                "data": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "id": {
+                                                      "type": "string"
+                                                    },
+                                                    "attributes": {
+                                                      "type": "object",
+                                                      "properties": {}
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
                                             "createdAt": {
                                               "type": "string",
                                               "format": "date-time"
                                             },
                                             "updatedAt": {
-                                              "type": "string",
-                                              "format": "date-time"
-                                            },
-                                            "publishedAt": {
                                               "type": "string",
                                               "format": "date-time"
                                             },
@@ -9467,10 +9786,6 @@
                                 "type": "string",
                                 "format": "date-time"
                               },
-                              "publishedAt": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
                               "createdBy": {
                                 "type": "object",
                                 "properties": {
@@ -9531,15 +9846,31 @@
                       }
                     }
                   },
+                  "denuncias": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "attributes": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
                   },
                   "updatedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "publishedAt": {
                     "type": "string",
                     "format": "date-time"
                   },
@@ -10213,9 +10544,6 @@
                                                                                       "solapin": {
                                                                                         "type": "string"
                                                                                       },
-                                                                                      "cargo": {
-                                                                                        "type": "string"
-                                                                                      },
                                                                                       "ci": {
                                                                                         "type": "string"
                                                                                       },
@@ -10258,6 +10586,14 @@
                                                                                             }
                                                                                           }
                                                                                         }
+                                                                                      },
+                                                                                      "cargo": {
+                                                                                        "type": "string",
+                                                                                        "enum": [
+                                                                                          "Trabajador",
+                                                                                          "Decano",
+                                                                                          "Supervisor"
+                                                                                        ]
                                                                                       },
                                                                                       "createdAt": {
                                                                                         "type": "string",
@@ -10353,10 +10689,6 @@
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
-                                                                        "publishedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
                                                                         "createdBy": {
                                                                           "type": "object",
                                                                           "properties": {
@@ -10398,15 +10730,31 @@
                                                               }
                                                             }
                                                           },
+                                                          "denuncias": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "array",
+                                                                "items": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
                                                           "createdAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
                                                           "updatedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
-                                                          "publishedAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
@@ -10455,10 +10803,6 @@
                                                 "format": "date-time"
                                               },
                                               "updatedAt": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                              },
-                                              "publishedAt": {
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
@@ -10559,10 +10903,6 @@
                                                 "type": "string",
                                                 "format": "date-time"
                                               },
-                                              "publishedAt": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                              },
                                               "createdBy": {
                                                 "type": "object",
                                                 "properties": {
@@ -10620,15 +10960,36 @@
                                       }
                                     }
                                   },
+                                  "estado": {
+                                    "type": "string",
+                                    "enum": [
+                                      "Pendiente",
+                                      "Denega",
+                                      "Aceptada"
+                                    ]
+                                  },
+                                  "expediente": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "string"
+                                          },
+                                          "attributes": {
+                                            "type": "object",
+                                            "properties": {}
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
                                   },
                                   "updatedAt": {
-                                    "type": "string",
-                                    "format": "date-time"
-                                  },
-                                  "publishedAt": {
                                     "type": "string",
                                     "format": "date-time"
                                   },
@@ -10678,10 +11039,6 @@
                       "format": "date-time"
                     },
                     "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
                       "type": "string",
                       "format": "date-time"
                     },
@@ -11346,9 +11703,6 @@
                                                                                     "solapin": {
                                                                                       "type": "string"
                                                                                     },
-                                                                                    "cargo": {
-                                                                                      "type": "string"
-                                                                                    },
                                                                                     "ci": {
                                                                                       "type": "string"
                                                                                     },
@@ -11391,6 +11745,14 @@
                                                                                           }
                                                                                         }
                                                                                       }
+                                                                                    },
+                                                                                    "cargo": {
+                                                                                      "type": "string",
+                                                                                      "enum": [
+                                                                                        "Trabajador",
+                                                                                        "Decano",
+                                                                                        "Supervisor"
+                                                                                      ]
                                                                                     },
                                                                                     "createdAt": {
                                                                                       "type": "string",
@@ -11486,10 +11848,6 @@
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
-                                                                      "publishedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
                                                                       "createdBy": {
                                                                         "type": "object",
                                                                         "properties": {
@@ -11531,15 +11889,31 @@
                                                             }
                                                           }
                                                         },
+                                                        "denuncias": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "data": {
+                                                              "type": "array",
+                                                              "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {}
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
                                                         },
                                                         "updatedAt": {
-                                                          "type": "string",
-                                                          "format": "date-time"
-                                                        },
-                                                        "publishedAt": {
                                                           "type": "string",
                                                           "format": "date-time"
                                                         },
@@ -11588,10 +11962,6 @@
                                               "format": "date-time"
                                             },
                                             "updatedAt": {
-                                              "type": "string",
-                                              "format": "date-time"
-                                            },
-                                            "publishedAt": {
                                               "type": "string",
                                               "format": "date-time"
                                             },
@@ -11692,10 +12062,6 @@
                                               "type": "string",
                                               "format": "date-time"
                                             },
-                                            "publishedAt": {
-                                              "type": "string",
-                                              "format": "date-time"
-                                            },
                                             "createdBy": {
                                               "type": "object",
                                               "properties": {
@@ -11753,15 +12119,36 @@
                                     }
                                   }
                                 },
+                                "estado": {
+                                  "type": "string",
+                                  "enum": [
+                                    "Pendiente",
+                                    "Denega",
+                                    "Aceptada"
+                                  ]
+                                },
+                                "expediente": {
+                                  "type": "object",
+                                  "properties": {
+                                    "data": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "attributes": {
+                                          "type": "object",
+                                          "properties": {}
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
                                 "createdAt": {
                                   "type": "string",
                                   "format": "date-time"
                                 },
                                 "updatedAt": {
-                                  "type": "string",
-                                  "format": "date-time"
-                                },
-                                "publishedAt": {
                                   "type": "string",
                                   "format": "date-time"
                                 },
@@ -11811,10 +12198,6 @@
                     "format": "date-time"
                   },
                   "updatedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "publishedAt": {
                     "type": "string",
                     "format": "date-time"
                   },
@@ -14996,9 +15379,6 @@
                                               "solapin": {
                                                 "type": "string"
                                               },
-                                              "cargo": {
-                                                "type": "string"
-                                              },
                                               "ci": {
                                                 "type": "string"
                                               },
@@ -15184,10 +15564,6 @@
                                                                                                     "type": "string",
                                                                                                     "format": "date-time"
                                                                                                   },
-                                                                                                  "publishedAt": {
-                                                                                                    "type": "string",
-                                                                                                    "format": "date-time"
-                                                                                                  },
                                                                                                   "createdBy": {
                                                                                                     "type": "object",
                                                                                                     "properties": {
@@ -15229,15 +15605,31 @@
                                                                                         }
                                                                                       }
                                                                                     },
+                                                                                    "denuncias": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "data": {
+                                                                                          "type": "array",
+                                                                                          "items": {
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                              "id": {
+                                                                                                "type": "string"
+                                                                                              },
+                                                                                              "attributes": {
+                                                                                                "type": "object",
+                                                                                                "properties": {}
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
                                                                                     "createdAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
                                                                                     "updatedAt": {
-                                                                                      "type": "string",
-                                                                                      "format": "date-time"
-                                                                                    },
-                                                                                    "publishedAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
@@ -15286,10 +15678,6 @@
                                                                           "format": "date-time"
                                                                         },
                                                                         "updatedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
-                                                                        "publishedAt": {
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
@@ -15390,10 +15778,6 @@
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
-                                                                        "publishedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
                                                                         "createdBy": {
                                                                           "type": "object",
                                                                           "properties": {
@@ -15451,15 +15835,36 @@
                                                                 }
                                                               }
                                                             },
+                                                            "estado": {
+                                                              "type": "string",
+                                                              "enum": [
+                                                                "Pendiente",
+                                                                "Denega",
+                                                                "Aceptada"
+                                                              ]
+                                                            },
+                                                            "expediente": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "data": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
                                                             "createdAt": {
                                                               "type": "string",
                                                               "format": "date-time"
                                                             },
                                                             "updatedAt": {
-                                                              "type": "string",
-                                                              "format": "date-time"
-                                                            },
-                                                            "publishedAt": {
                                                               "type": "string",
                                                               "format": "date-time"
                                                             },
@@ -15523,6 +15928,14 @@
                                                     }
                                                   }
                                                 }
+                                              },
+                                              "cargo": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "Trabajador",
+                                                  "Decano",
+                                                  "Supervisor"
+                                                ]
                                               },
                                               "createdAt": {
                                                 "type": "string",
@@ -16125,9 +16538,6 @@
                                             "solapin": {
                                               "type": "string"
                                             },
-                                            "cargo": {
-                                              "type": "string"
-                                            },
                                             "ci": {
                                               "type": "string"
                                             },
@@ -16313,10 +16723,6 @@
                                                                                                   "type": "string",
                                                                                                   "format": "date-time"
                                                                                                 },
-                                                                                                "publishedAt": {
-                                                                                                  "type": "string",
-                                                                                                  "format": "date-time"
-                                                                                                },
                                                                                                 "createdBy": {
                                                                                                   "type": "object",
                                                                                                   "properties": {
@@ -16358,15 +16764,31 @@
                                                                                       }
                                                                                     }
                                                                                   },
+                                                                                  "denuncias": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                      "data": {
+                                                                                        "type": "array",
+                                                                                        "items": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "id": {
+                                                                                              "type": "string"
+                                                                                            },
+                                                                                            "attributes": {
+                                                                                              "type": "object",
+                                                                                              "properties": {}
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  },
                                                                                   "createdAt": {
                                                                                     "type": "string",
                                                                                     "format": "date-time"
                                                                                   },
                                                                                   "updatedAt": {
-                                                                                    "type": "string",
-                                                                                    "format": "date-time"
-                                                                                  },
-                                                                                  "publishedAt": {
                                                                                     "type": "string",
                                                                                     "format": "date-time"
                                                                                   },
@@ -16415,10 +16837,6 @@
                                                                         "format": "date-time"
                                                                       },
                                                                       "updatedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
-                                                                      "publishedAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
@@ -16519,10 +16937,6 @@
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
-                                                                      "publishedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
                                                                       "createdBy": {
                                                                         "type": "object",
                                                                         "properties": {
@@ -16580,15 +16994,36 @@
                                                               }
                                                             }
                                                           },
+                                                          "estado": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                              "Pendiente",
+                                                              "Denega",
+                                                              "Aceptada"
+                                                            ]
+                                                          },
+                                                          "expediente": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {}
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
                                                           "createdAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
                                                           "updatedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
-                                                          "publishedAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
@@ -16652,6 +17087,14 @@
                                                   }
                                                 }
                                               }
+                                            },
+                                            "cargo": {
+                                              "type": "string",
+                                              "enum": [
+                                                "Trabajador",
+                                                "Decano",
+                                                "Supervisor"
+                                              ]
                                             },
                                             "createdAt": {
                                               "type": "string",
@@ -16997,9 +17440,6 @@
                                                             "solapin": {
                                                               "type": "string"
                                                             },
-                                                            "cargo": {
-                                                              "type": "string"
-                                                            },
                                                             "ci": {
                                                               "type": "string"
                                                             },
@@ -17182,10 +17622,6 @@
                                                                                                                   "format": "date-time"
                                                                                                                 },
                                                                                                                 "updatedAt": {
-                                                                                                                  "type": "string",
-                                                                                                                  "format": "date-time"
-                                                                                                                },
-                                                                                                                "publishedAt": {
                                                                                                                   "type": "string",
                                                                                                                   "format": "date-time"
                                                                                                                 },
@@ -17481,15 +17917,31 @@
                                                                                                       }
                                                                                                     }
                                                                                                   },
+                                                                                                  "denuncias": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "data": {
+                                                                                                        "type": "array",
+                                                                                                        "items": {
+                                                                                                          "type": "object",
+                                                                                                          "properties": {
+                                                                                                            "id": {
+                                                                                                              "type": "string"
+                                                                                                            },
+                                                                                                            "attributes": {
+                                                                                                              "type": "object",
+                                                                                                              "properties": {}
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  },
                                                                                                   "createdAt": {
                                                                                                     "type": "string",
                                                                                                     "format": "date-time"
                                                                                                   },
                                                                                                   "updatedAt": {
-                                                                                                    "type": "string",
-                                                                                                    "format": "date-time"
-                                                                                                  },
-                                                                                                  "publishedAt": {
                                                                                                     "type": "string",
                                                                                                     "format": "date-time"
                                                                                                   },
@@ -17538,10 +17990,6 @@
                                                                                         "format": "date-time"
                                                                                       },
                                                                                       "updatedAt": {
-                                                                                        "type": "string",
-                                                                                        "format": "date-time"
-                                                                                      },
-                                                                                      "publishedAt": {
                                                                                         "type": "string",
                                                                                         "format": "date-time"
                                                                                       },
@@ -17642,10 +18090,6 @@
                                                                                         "type": "string",
                                                                                         "format": "date-time"
                                                                                       },
-                                                                                      "publishedAt": {
-                                                                                        "type": "string",
-                                                                                        "format": "date-time"
-                                                                                      },
                                                                                       "createdBy": {
                                                                                         "type": "object",
                                                                                         "properties": {
@@ -17703,15 +18147,36 @@
                                                                               }
                                                                             }
                                                                           },
+                                                                          "estado": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                              "Pendiente",
+                                                                              "Denega",
+                                                                              "Aceptada"
+                                                                            ]
+                                                                          },
+                                                                          "expediente": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "id": {
+                                                                                    "type": "string"
+                                                                                  },
+                                                                                  "attributes": {
+                                                                                    "type": "object",
+                                                                                    "properties": {}
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
                                                                           "createdAt": {
                                                                             "type": "string",
                                                                             "format": "date-time"
                                                                           },
                                                                           "updatedAt": {
-                                                                            "type": "string",
-                                                                            "format": "date-time"
-                                                                          },
-                                                                          "publishedAt": {
                                                                             "type": "string",
                                                                             "format": "date-time"
                                                                           },
@@ -17775,6 +18240,14 @@
                                                                   }
                                                                 }
                                                               }
+                                                            },
+                                                            "cargo": {
+                                                              "type": "string",
+                                                              "enum": [
+                                                                "Trabajador",
+                                                                "Decano",
+                                                                "Supervisor"
+                                                              ]
                                                             },
                                                             "createdAt": {
                                                               "type": "string",
@@ -18155,9 +18628,6 @@
                                                           "solapin": {
                                                             "type": "string"
                                                           },
-                                                          "cargo": {
-                                                            "type": "string"
-                                                          },
                                                           "ci": {
                                                             "type": "string"
                                                           },
@@ -18340,10 +18810,6 @@
                                                                                                                 "format": "date-time"
                                                                                                               },
                                                                                                               "updatedAt": {
-                                                                                                                "type": "string",
-                                                                                                                "format": "date-time"
-                                                                                                              },
-                                                                                                              "publishedAt": {
                                                                                                                 "type": "string",
                                                                                                                 "format": "date-time"
                                                                                                               },
@@ -18639,15 +19105,31 @@
                                                                                                     }
                                                                                                   }
                                                                                                 },
+                                                                                                "denuncias": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {
+                                                                                                    "data": {
+                                                                                                      "type": "array",
+                                                                                                      "items": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {
+                                                                                                          "id": {
+                                                                                                            "type": "string"
+                                                                                                          },
+                                                                                                          "attributes": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {}
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
                                                                                                 "createdAt": {
                                                                                                   "type": "string",
                                                                                                   "format": "date-time"
                                                                                                 },
                                                                                                 "updatedAt": {
-                                                                                                  "type": "string",
-                                                                                                  "format": "date-time"
-                                                                                                },
-                                                                                                "publishedAt": {
                                                                                                   "type": "string",
                                                                                                   "format": "date-time"
                                                                                                 },
@@ -18696,10 +19178,6 @@
                                                                                       "format": "date-time"
                                                                                     },
                                                                                     "updatedAt": {
-                                                                                      "type": "string",
-                                                                                      "format": "date-time"
-                                                                                    },
-                                                                                    "publishedAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
@@ -18800,10 +19278,6 @@
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
-                                                                                    "publishedAt": {
-                                                                                      "type": "string",
-                                                                                      "format": "date-time"
-                                                                                    },
                                                                                     "createdBy": {
                                                                                       "type": "object",
                                                                                       "properties": {
@@ -18861,15 +19335,36 @@
                                                                             }
                                                                           }
                                                                         },
+                                                                        "estado": {
+                                                                          "type": "string",
+                                                                          "enum": [
+                                                                            "Pendiente",
+                                                                            "Denega",
+                                                                            "Aceptada"
+                                                                          ]
+                                                                        },
+                                                                        "expediente": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "data": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "string"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {}
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
                                                                         "createdAt": {
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
                                                                         "updatedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
-                                                                        "publishedAt": {
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
@@ -18933,6 +19428,14 @@
                                                                 }
                                                               }
                                                             }
+                                                          },
+                                                          "cargo": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                              "Trabajador",
+                                                              "Decano",
+                                                              "Supervisor"
+                                                            ]
                                                           },
                                                           "createdAt": {
                                                             "type": "string",
@@ -19211,9 +19714,6 @@
               "solapin": {
                 "type": "string"
               },
-              "cargo": {
-                "type": "string"
-              },
               "ci": {
                 "type": "string"
               },
@@ -19244,6 +19744,14 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "cargo": {
+                "type": "string",
+                "enum": [
+                  "Trabajador",
+                  "Decano",
+                  "Supervisor"
+                ]
               }
             }
           }
@@ -19702,9 +20210,6 @@
                                               "solapin": {
                                                 "type": "string"
                                               },
-                                              "cargo": {
-                                                "type": "string"
-                                              },
                                               "ci": {
                                                 "type": "string"
                                               },
@@ -19890,10 +20395,6 @@
                                                                                                     "type": "string",
                                                                                                     "format": "date-time"
                                                                                                   },
-                                                                                                  "publishedAt": {
-                                                                                                    "type": "string",
-                                                                                                    "format": "date-time"
-                                                                                                  },
                                                                                                   "createdBy": {
                                                                                                     "type": "object",
                                                                                                     "properties": {
@@ -19935,15 +20436,31 @@
                                                                                         }
                                                                                       }
                                                                                     },
+                                                                                    "denuncias": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "data": {
+                                                                                          "type": "array",
+                                                                                          "items": {
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                              "id": {
+                                                                                                "type": "string"
+                                                                                              },
+                                                                                              "attributes": {
+                                                                                                "type": "object",
+                                                                                                "properties": {}
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
                                                                                     "createdAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
                                                                                     "updatedAt": {
-                                                                                      "type": "string",
-                                                                                      "format": "date-time"
-                                                                                    },
-                                                                                    "publishedAt": {
                                                                                       "type": "string",
                                                                                       "format": "date-time"
                                                                                     },
@@ -19992,10 +20509,6 @@
                                                                           "format": "date-time"
                                                                         },
                                                                         "updatedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
-                                                                        "publishedAt": {
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
@@ -20096,10 +20609,6 @@
                                                                           "type": "string",
                                                                           "format": "date-time"
                                                                         },
-                                                                        "publishedAt": {
-                                                                          "type": "string",
-                                                                          "format": "date-time"
-                                                                        },
                                                                         "createdBy": {
                                                                           "type": "object",
                                                                           "properties": {
@@ -20157,15 +20666,36 @@
                                                                 }
                                                               }
                                                             },
+                                                            "estado": {
+                                                              "type": "string",
+                                                              "enum": [
+                                                                "Pendiente",
+                                                                "Denega",
+                                                                "Aceptada"
+                                                              ]
+                                                            },
+                                                            "expediente": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "data": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
                                                             "createdAt": {
                                                               "type": "string",
                                                               "format": "date-time"
                                                             },
                                                             "updatedAt": {
-                                                              "type": "string",
-                                                              "format": "date-time"
-                                                            },
-                                                            "publishedAt": {
                                                               "type": "string",
                                                               "format": "date-time"
                                                             },
@@ -20229,6 +20759,14 @@
                                                     }
                                                   }
                                                 }
+                                              },
+                                              "cargo": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "Trabajador",
+                                                  "Decano",
+                                                  "Supervisor"
+                                                ]
                                               },
                                               "createdAt": {
                                                 "type": "string",
@@ -20336,9 +20874,6 @@
                     "solapin": {
                       "type": "string"
                     },
-                    "cargo": {
-                      "type": "string"
-                    },
                     "ci": {
                       "type": "string"
                     },
@@ -20381,6 +20916,14 @@
                           }
                         }
                       }
+                    },
+                    "cargo": {
+                      "type": "string",
+                      "enum": [
+                        "Trabajador",
+                        "Decano",
+                        "Supervisor"
+                      ]
                     },
                     "createdAt": {
                       "type": "string",
@@ -20905,9 +21448,6 @@
                                             "solapin": {
                                               "type": "string"
                                             },
-                                            "cargo": {
-                                              "type": "string"
-                                            },
                                             "ci": {
                                               "type": "string"
                                             },
@@ -21093,10 +21633,6 @@
                                                                                                   "type": "string",
                                                                                                   "format": "date-time"
                                                                                                 },
-                                                                                                "publishedAt": {
-                                                                                                  "type": "string",
-                                                                                                  "format": "date-time"
-                                                                                                },
                                                                                                 "createdBy": {
                                                                                                   "type": "object",
                                                                                                   "properties": {
@@ -21138,15 +21674,31 @@
                                                                                       }
                                                                                     }
                                                                                   },
+                                                                                  "denuncias": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                      "data": {
+                                                                                        "type": "array",
+                                                                                        "items": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "id": {
+                                                                                              "type": "string"
+                                                                                            },
+                                                                                            "attributes": {
+                                                                                              "type": "object",
+                                                                                              "properties": {}
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  },
                                                                                   "createdAt": {
                                                                                     "type": "string",
                                                                                     "format": "date-time"
                                                                                   },
                                                                                   "updatedAt": {
-                                                                                    "type": "string",
-                                                                                    "format": "date-time"
-                                                                                  },
-                                                                                  "publishedAt": {
                                                                                     "type": "string",
                                                                                     "format": "date-time"
                                                                                   },
@@ -21195,10 +21747,6 @@
                                                                         "format": "date-time"
                                                                       },
                                                                       "updatedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
-                                                                      "publishedAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
@@ -21299,10 +21847,6 @@
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
-                                                                      "publishedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
                                                                       "createdBy": {
                                                                         "type": "object",
                                                                         "properties": {
@@ -21360,15 +21904,36 @@
                                                               }
                                                             }
                                                           },
+                                                          "estado": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                              "Pendiente",
+                                                              "Denega",
+                                                              "Aceptada"
+                                                            ]
+                                                          },
+                                                          "expediente": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {}
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
                                                           "createdAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
                                                           "updatedAt": {
-                                                            "type": "string",
-                                                            "format": "date-time"
-                                                          },
-                                                          "publishedAt": {
                                                             "type": "string",
                                                             "format": "date-time"
                                                           },
@@ -21432,6 +21997,14 @@
                                                   }
                                                 }
                                               }
+                                            },
+                                            "cargo": {
+                                              "type": "string",
+                                              "enum": [
+                                                "Trabajador",
+                                                "Decano",
+                                                "Supervisor"
+                                              ]
                                             },
                                             "createdAt": {
                                               "type": "string",
@@ -21539,9 +22112,6 @@
                   "solapin": {
                     "type": "string"
                   },
-                  "cargo": {
-                    "type": "string"
-                  },
                   "ci": {
                     "type": "string"
                   },
@@ -21584,6 +22154,14 @@
                         }
                       }
                     }
+                  },
+                  "cargo": {
+                    "type": "string",
+                    "enum": [
+                      "Trabajador",
+                      "Decano",
+                      "Supervisor"
+                    ]
                   },
                   "createdAt": {
                     "type": "string",
